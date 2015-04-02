@@ -1,7 +1,0 @@
----
-title: "Caesar Cipher"
-type: "challenge"
-description: "Write a Ruby method to encode a string."
-depends: "rock-paper-scissors"
-ignore:
-- "ruby-kata-ceasar-cipher.md"
