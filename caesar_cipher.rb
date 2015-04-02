@@ -4,9 +4,9 @@ def caesar_cipher(string, number)
   ciphered_string = ''
   string.each_codepoint do |codepoint|
     if codepoint <= 90 && (codepoint + number) > 90
-      ciphered_string.concat(64 + codepoint + number - 90)
+      ciphered_string.concat(codepoint + number - 26)
     elsif codepoint <= 122 && (codepoint + number) > 122
-      ciphered_string.concat(96 + codepoint + number - 122)
+      ciphered_string.concat(codepoint + number - 26)
     elsif codepoint > 64 && codepoint < 91 or codepoint > 96 && codepoint < 123
       ciphered_string.concat(codepoint + number)
     else
