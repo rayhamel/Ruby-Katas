@@ -34,11 +34,11 @@ describe '#optimal_guesser' do
     expect(guesser(GUESS_TEST, 1002)).to eq false
     expect(guesser(GUESS_TEST, 1_000_001)).to eq false
   end
+end
 
-  describe '#palindrome?' do
-    it 'answers correctly' do
-      expect(palindrome?('A Santa at NASA')).to eq true
-      expect(palindrome?('Elvis lives')).to eq false
-    end
+describe '#palindrome?' do
+  it 'answers correctly' do
+    expect(palindrome?('A Santa at NASA')).to eq true
+    expect(palindrome?('Elvis lives')).to eq false
   end
 end
