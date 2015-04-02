@@ -1,16 +1,14 @@
 # Works with ASCII or any version of Unicode/UTF-8 (default character encoding in Ruby)
-def caesar_cipher(string, number)
+def caesar_cipher(str, number)
   number %= 26
   ciphered_string = ''
-  string.each_codepoint do |codepoint|
-    if codepoint <= 90 && (codepoint + number) > 90
-      ciphered_string.concat(codepoint + number - 26)
-    elsif codepoint <= 122 && (codepoint + number) > 122
-      ciphered_string.concat(codepoint + number - 26)
-    elsif codepoint > 64 && codepoint < 91 or codepoint > 96 && codepoint < 123
-      ciphered_string.concat(codepoint + number)
+  str.each_codepoint do |pnt|
+    if pnt <= 90 && (pnt + number) > 90 or pnt <= 122 && (pnt + number) > 122
+      ciphered_string.concat(pnt + number - 26)
+    elsif pnt > 64 && pnt < 91 or pnt > 96 && pnt < 123
+      ciphered_string.concat(pnt + number)
     else
-      ciphered_string.concat(codepoint)
+      ciphered_string.concat(pnt)
     end
   end
   ciphered_string
