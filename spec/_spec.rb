@@ -1,9 +1,9 @@
-require_relative 'caesar_cipher'
-require_relative 'minimum_consecutive_integers'
-require_relative 'optimal_guesser'
-require_relative 'palindrome'
-require_relative 'string_permutations'
-require_relative 'uniqueness_checker'
+require_relative '../caesar_cipher'
+require_relative '../minimum_consecutive_integers'
+require_relative '../optimal_guesser'
+require_relative '../palindrome'
+require_relative '../string_permutations'
+require_relative '../uniqueness_checker'
 
 describe '#caesar_cipher' do
   it 'properly enciphers text' do
