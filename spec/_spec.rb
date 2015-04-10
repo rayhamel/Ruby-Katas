@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../caesar_cipher'
 require_relative '../duplicate_element_counter'
 require_relative '../minimum_coins'
