@@ -1,5 +1,6 @@
 require_relative '../caesar_cipher'
 require_relative '../duplicate_element_counter'
+require_relative '../minimum_coins'
 require_relative '../minimum_consecutive_integers'
 require_relative '../optimal_guesser'
 require_relative '../palindrome'
@@ -82,6 +83,14 @@ describe '#guesser and #guesser_with_check' do
     expect(guesser_with_check(GUESS_TEST, 65)).to eq true
     expect(guesser_with_check(GUESS_TEST, 1001)).to eq true
     expect(guesser_with_check(GUESS_TEST, 1_000_000)).to eq true
+  end
+end
+
+describe '#minimum_coins' do
+  it 'returns the minimum number of coins needed' do
+    expect(minimum_coins(35)).to eq 2
+    expect(minimum_coins(37)).to eq 4
+    expect(minimum_coins(101)).to eq 2
   end
 end
 
