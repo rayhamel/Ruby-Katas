@@ -1,4 +1,5 @@
 require_relative '../caesar_cipher'
+require_relative '../duplicate_element_counter'
 require_relative '../minimum_consecutive_integers'
 require_relative '../optimal_guesser'
 require_relative '../palindrome'
@@ -10,6 +11,14 @@ describe '#caesar_cipher' do
     expect(caesar_cipher(
       'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 1234567890', 57)
     ).to eq 'FGHIJKLMNOPQRSTUVWXYZABCDE fghijklmnopqrstuvwxyzabcde 1234567890'
+  end
+end
+
+describe '#duplicate_counter' do
+  it 'returns the number of duplicate elements' do
+    expect(duplicate_counter([1, 7, 7, 7, 3, 5])).to eq 2
+    expect(duplicate_counter([5, 7, 9])).to eq 0
+    expect(duplicate_counter([0, -5, -5, 33, 33, 33])).to eq 3
   end
 end
 
