@@ -1,4 +1,3 @@
-require 'pry'
 require 'coveralls'
 Coveralls.wear!
 require_relative '../caesar_cipher'
